@@ -7,7 +7,9 @@ Example using log4net in .NET Core Console Application. See links below for exam
 Primarily this example takes advantage of these NuGet packages
 
 ```powershell
-
+Install-Package Microsoft.Extensions.Logging
+Install-Package Microsoft.Extensions.Logging.Log4Net.AspNetCore
+Install-Package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Links
