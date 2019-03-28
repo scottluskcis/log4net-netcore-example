@@ -21,7 +21,7 @@ namespace Log4NetInCoreExample
             var myTestClass = serviceProvider.GetService<IClassThatLogs>();
             myTestClass.DoWork();
 
-            // secondary way that also works but see preferred way
+            // secondary way that also works but see preferred way before using this approach
             var myOtherClass = new ClassThatUsesLogManager();
             myOtherClass.DoWork();
 
@@ -34,8 +34,8 @@ namespace Log4NetInCoreExample
         private static void ConfigureServices(IServiceCollection services)
         {
             // NOTE: there are two approaches you can use for configuration of log4net
-            // 1. use the log4net.config XML file
-            // 2. use appsettings.json with the ConfigurationBuilder
+            // in addition to using the log4net.config XML file
+            // you can also use appsettings.json with the ConfigurationBuilder for overrides
 
             // add configuration from appsettings
             var config = new ConfigurationBuilder()
@@ -45,7 +45,7 @@ namespace Log4NetInCoreExample
 
             var loggingOptions = config.GetSection("Log4NetCore")
                 .Get<Log4NetProviderOptions>();
-
+            
             // add logging
             services.AddLogging(configure => configure.AddLog4Net(loggingOptions));
 
