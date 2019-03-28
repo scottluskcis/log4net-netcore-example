@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -26,10 +28,21 @@ namespace Log4NetInCoreExample
 
         private static void ConfigureServices(IServiceCollection services)
         {
-            // configure logging
-            services
-                .AddLogging(configure => configure.AddLog4Net())
-                .Configure<LoggerFilterOptions>(options => options.MinLevel = LogLevel.Debug);
+            // NOTE: there are two approaches you can use for configuration of log4net
+            // 1. use the log4net.config XML file
+            // 2. use appsettings.json with the ConfigurationBuilder
+
+            // add configuration from appsettings
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var loggingOptions = config.GetSection("Log4NetCore")
+                .Get<Log4NetProviderOptions>();
+
+            // add logging
+            services.AddLogging(configure => configure.AddLog4Net(loggingOptions));
 
             // dependency injection for test classes
             services.AddTransient<IClassThatLogs, ClassUsingILogger>();

@@ -16,6 +16,7 @@ dotnet add package Microsoft.Extensions.DependencyInjection
 
 ## Links
 
-* [How to use Log4Net with ASP.NET Core for logging](https://dotnetthoughts.net/how-to-use-log4net-with-aspnetcore-for-logging/)
 * [Microsoft.Extensions.Logging.Log4Net.AspNetCore](https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore)
+* [Microsoft.Extensions.Logging.Log4Net.AspNetCore - CONFIG](https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore/blob/develop/doc/CONFIG.md)
+* [How to use Log4Net with ASP.NET Core for logging](https://dotnetthoughts.net/how-to-use-log4net-with-aspnetcore-for-logging/)
 * [Logging in .Net Core Console Apps](https://www.blinkingcaret.com/2018/02/14/net-core-console-logging/)
