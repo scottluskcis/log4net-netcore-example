@@ -22,3 +22,4 @@ The output of the log file is placed in `Log4NetInCoreExampleLogFile.log` in the
 * [Microsoft.Extensions.Logging.Log4Net.AspNetCore - CONFIG](https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore/blob/develop/doc/CONFIG.md)
 * [How to use Log4Net with ASP.NET Core for logging](https://dotnetthoughts.net/how-to-use-log4net-with-aspnetcore-for-logging/)
 * [Logging in .Net Core Console Apps](https://www.blinkingcaret.com/2018/02/14/net-core-console-logging/)
+* [Apache log4net](http://logging.apache.org/log4net/)

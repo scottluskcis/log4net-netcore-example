@@ -18,8 +18,9 @@ namespace Log4NetInCoreExample
 
             // preferred way to handle 
             // use dependency injection to retrieve class and do work that will log something
+            // the ILogger will be passed to constructor of class
             var myTestClass = serviceProvider.GetService<IClassThatLogs>();
-            myTestClass.DoWork();
+            myTestClass.DoWork(); 
 
             // secondary way that also works but see preferred way before using this approach
             var myOtherClass = new ClassThatUsesLogManager();
