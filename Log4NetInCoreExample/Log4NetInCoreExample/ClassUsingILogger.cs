@@ -7,6 +7,7 @@ namespace Log4NetInCoreExample
 {
     public class ClassUsingILogger : IClassThatLogs
     {
+        // approach using ILogger via Dependency Injection, preferred way of getting a logger
         private readonly ILogger _logger;
 
         public ClassUsingILogger(ILogger<ClassUsingILogger> logger)

@@ -16,9 +16,14 @@ namespace Log4NetInCoreExample
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
+            // preferred way to handle 
             // use dependency injection to retrieve class and do work that will log something
             var myTestClass = serviceProvider.GetService<IClassThatLogs>();
             myTestClass.DoWork();
+
+            // secondary way that also works but see preferred way
+            var myOtherClass = new ClassThatUsesLogManager();
+            myOtherClass.DoWork();
 
             Console.WriteLine("check your log file for log output");
 

@@ -14,6 +14,8 @@ dotnet add package Microsoft.Extensions.Logging.Log4Net.AspNetCore
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
+The output of the log file is placed in `Log4NetInCoreExampleLogFile.log` in the bin folder when you run the application
+
 ## Links
 
 * [Microsoft.Extensions.Logging.Log4Net.AspNetCore](https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore)
