@@ -2,14 +2,16 @@
 
 ## Overview
 
-Example using log4net in .NET Core Console Application. See links below for examples used to put together this example.
+Example using log4net in .NET Core Console Application. See links below for examples used to put together this example. This
+example also illustrates using Dependency Injection so that this can be ported over to other .NET Core projects such as .NET 
+Core Web Applications. 
 
 Primarily this example takes advantage of these NuGet packages
 
 ```powershell
-Install-Package Microsoft.Extensions.Logging
-Install-Package Microsoft.Extensions.Logging.Log4Net.AspNetCore
-Install-Package Microsoft.Extensions.DependencyInjection
+dotnet add package Microsoft.Extensions.Logging
+dotnet add package Microsoft.Extensions.Logging.Log4Net.AspNetCore
+dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Links
